@@ -20,11 +20,9 @@ function closeModal() {
 
 // A tényleges lejátszás függvénye
 function startMovie() {
-    if (currentFileName) {
-        // Megnyitja a fájlt (ha egy mappában van a HTML-el)
-        window.open("GOAT - Will a bajnok 2026.1080p.WEBRip.HUN-MOVIE.mkv", '_blank');
-    }
+    window.open("GOAT - Will a bajnok 2026.1080p.WEBRip.HUN-MOVIE.mkv", "_blank");
 }
+
 
 window.onclick = function(event) {
     let modal = document.getElementById("movieModal");
