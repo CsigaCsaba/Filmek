@@ -20,7 +20,7 @@ function closeModal() {
 
 // A tényleges lejátszás függvénye
 function startMovie() {
-    window.open("GOAT - Will a bajnok 2026.1080p.WEBRip.HUN-MOVIE.mkv", "_blank");
+    window.open("https://turristvanszakkozepisk-my.sharepoint.com/:v:/g/personal/horvathcsabapeter_turr_hu/IQDGemJjcBG6Qr0y5giTk2ILAdrSmCABt9zXumzplr46wYo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yq3U9W", "_blank");
 }
 
 
