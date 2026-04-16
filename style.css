@@ -1,0 +1,141 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { 
+    background-color: #0b0b0b; 
+    color: white; 
+    line-height: 1.6;
+}
+
+/* Navigáció */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0,0,0,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo span { color: #e50914; font-weight: bold; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-size: 0.9rem; }
+
+/* Hős szekció */
+.hero { padding: 40px 5%; }
+
+/* Reszponzív Film Rács */
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 0 5% 50px 5%;
+}
+
+/* Kártyák */
+.movie-card {
+    background: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid #222;
+}
+.movie-card:hover {
+    transform: scale(1.05);
+    border-color: #e50914;
+}
+.movie-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+.movie-info { padding: 15px; }
+.rating { color: #ffbd03; font-weight: bold; font-size: 0.8rem; }
+
+/* Modal Stílus */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+.modal-content {
+    background: #181818;
+    margin: 5% auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    position: relative;
+}
+.close { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+
+/* Modal Belső Elrendezés */
+.modal-body {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.modal-img-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.quality-badge{
+    text-align: center;
+    font-size: 25px;
+}
+.file-name-short{
+    
+}
+.modal-img-container img {
+    width: 100%;
+    transition: transform 0.5s ease;
+    cursor: zoom-in;
+}
+/* EZ A NAGYÍTÁS EFFEKT */
+.modal-img-container img:hover {
+    transform: scale(1.4);
+}
+.modal-details { flex: 1.5; }
+.rating-tag { background: #333; padding: 5px 10px; display: inline-block; border-radius: 5px; color: #ffbd03; margin: 10px 0; }
+.play-btn { 
+    background: #e50914; color: white; border: none; padding: 12px 25px; 
+    border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 20px;
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+    .modal-body { flex-direction: column; text-align: center; }
+}
+/* Zöld Lejátszás gomb */
+.play-movie-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+    margin-top: 20px;
+}
+
+.play-movie-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.5);
+}
+
+.action-buttons {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+/* Többi stílus marad a korábbi (kártyák, modal, stb.) */

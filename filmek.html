@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoziSziget | GOAT - Will a bajnok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mozi<span>Sziget</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Kezdőlap</a></li>
+            <li><a href="#">Filmek</a></li>
+            <li><a href="#">Sorozatok</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Üdv a MoziSzigeten!</h1>
+    </header>
+
+    <main class="movie-container">
+        <div class="movie-card" onclick="openModal('GOAT - Will a bajnok', 'A kis kecske nagy álmokkal esélyt kap, hogy csatlakozzon a profikhoz és roarbball-t játsszon egy intenzív sportban.', 'Goat.jpg', '⭐ 6.7/10', 'GOAT - Will a bajnok 2026.1080p.WEBRip.HUN-MOVIE.mkv')">
+            <div class="quality-badge">1080p</div>
+            <img src="Goat.jpg" alt="Goat film poszter">
+            <div class="movie-info">
+                <h3>GOAT: Will a bajnok</h3>
+                <span class="file-name-short">2026</span>
+                <span class="rating">⭐ 6.7</span>
+            </div>
+        </div>
+    </main>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalImg" src="" alt="Film poszter">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <div id="modalRating" class="rating-tag"></div>
+                    <div class="technical-info">
+                        <strong>Fájlnév:</strong> <span id="modalFileName" style="color: #e50914; font-family: monospace;"></span>
+                    </div>
+                    <p id="modalDescription" style="margin-top: 15px;"></p>
+                    <div class="action-buttons">
+                        <button class="play-btn" onclick="window.open('https://www.imdb.com/title/tt27613895/', '_blank')">IMDb Adatlap</button>
+                        <button class="play-movie-btn" onclick="startMovie()">▶ Lejátszás</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
