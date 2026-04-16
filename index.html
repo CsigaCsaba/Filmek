@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoziSziget | GOAT - Will a bajnok</title>
+    <title>MoziSziget | Kezdőlap</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,13 +22,21 @@
     </header>
 
     <main class="movie-container">
-        <div class="movie-card" onclick="openModal('GOAT - Will a bajnok', 'A kis kecske nagy álmokkal esélyt kap, hogy csatlakozzon a profikhoz és roarbball-t játsszon egy intenzív sportban.', 'Goat.jpg', '⭐ 6.7/10', 'GOAT - Will a bajnok 2026.1080p.WEBRip.HUN-MOVIE.mkv')">
+        <div class="movie-card" onclick="openModal('GOAT - Will a bajnok', 'A kis kecske nagy álmokkal esélyt kap, hogy csatlakozzon a profikhoz.', 'Goat.jpg', '6.7/10', 'GOAT - Will a bajnok 2026.1080p.WEBRip.HUN-MOVIE.mkv')">
             <div class="quality-badge">1080p</div>
             <img src="Goat.jpg" alt="Goat film poszter">
             <div class="movie-info">
                 <h3>GOAT: Will a bajnok</h3>
-                <span class="file-name-short">2026</span>
                 <span class="rating">⭐ 6.7</span>
+            </div>
+        </div>
+
+        <div class="movie-card" onclick="openModal('Super Mario Galaxis', 'A népszerű videojáték alapján készült látványos animációs film, ahol Mario és barátai az űrben kalandoznak.', 'https://image.api.playstation.com/vulcan/ap/rnd/202009/0114/7rYyYkPyp13H9lqA1VwT3O5W.png', '8.9/10', 'Super Mario Galaxis A film HD MOZI - online filmek sorozatok kiv.mp4')">
+            <div class="quality-badge">HD</div>
+            <img src="supermariogalaxis.webp" alt="Super Mario Galaxis">
+            <div class="movie-info">
+                <h3>Super Mario Galaxis</h3>
+                <span class="rating">⭐ 8.9</span>
             </div>
         </div>
     </main>
@@ -38,17 +46,21 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-body">
                 <div class="modal-img-container">
-                    <img id="modalImg" src="" alt="Film poszter">
+                    <img id="modalImg" src="supermariogalaxis.webp" alt="Film poszter">
                 </div>
                 <div class="modal-details">
                     <h2 id="modalTitle"></h2>
                     <div id="modalRating" class="rating-tag"></div>
+                    
                     <div class="technical-info">
-                        <strong>Fájlnév:</strong> <span id="modalFileName" style="color: #e50914; font-family: monospace;"></span>
+                        <strong>Fájlnév:</strong> <br>
+                        <span id="modalFileName" style="color: #e50914; font-family: monospace;"></span>
                     </div>
+
                     <p id="modalDescription" style="margin-top: 15px;"></p>
+
                     <div class="action-buttons">
-                        <button class="play-btn" onclick="window.open('https://www.imdb.com/title/tt27613895/', '_blank')">IMDb Adatlap</button>
+                        <button class="play-btn" onclick="openIMDb()">IMDb Adatlap</button>
                         <button class="play-movie-btn" onclick="startMovie()">▶ Lejátszás</button>
                     </div>
                 </div>
